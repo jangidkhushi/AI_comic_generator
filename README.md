@@ -65,8 +65,11 @@ The AI Comic Generator is a web application that allows users to create personal
     Click "Generate Comic" to create your personalized comic strip.
 
 ## Screenshots
+![Home Page](comic01.jpg)
+![Home Page](comic02.jpg)
 ![Home Page](comic1prompts.jpg)
 ![Home Page](comic1.jpg)
+![Home Page](comic2prompts.jpg)
 ![Home Page](comic2.jpg)
 
 ## Contributing
