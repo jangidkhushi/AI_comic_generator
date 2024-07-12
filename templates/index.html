@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comic Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Comic Wizard</h1>
+    </header>
+    <main>
+        <section class="input-section">
+            <h2>Create Your Comic</h2>
+            <p class="intro-text">Unleash your imagination and create epic tales with our comic generator! Dive into a world where your prompts bring stories to life, one panel at a time.</p>
+            <img src="{{ url_for('static', filename='images/background.jpg') }}" alt="Create Your Comic Image" class="comic-image">
+            <select id="genreSelect" onchange="setStoryInput()">
+                <option value="" disabled selected>Select Genre</option>
+                <option value="superhero">Superhero</option>
+                <option value="action">Action</option>
+                <option value="drama">Drama</option>
+                <option value="horror">Horror</option>
+                <option value="thriller">Thriller</option>
+                <option value="sci_fi">Sci-Fi</option>
+            </select>
+            <textarea id="storyInput" placeholder="Enter your story here..."></textarea>
+            <button onclick="generateStory()">Generate Story</button>
+            <div id="storyOutput" class="output-box"></div>
+            <select id="styleSelect">
+                <option value="" disabled selected>Select Comic Art Style</option>
+                <option value="american_comic_colored">American Comic, Colored</option>
+                <option value="manga_black_and_white">Manga, Black and White</option>
+                <option value="cartoonish_vibrant_colors">Cartoonish, Vibrant Colors</option>
+            </select>
+            <p class="prompt-text">Provide your prompts based on the epic tale above!</p>
+            <div id="prompts-container">
+                <input type="text" id="prompt1" placeholder="Enter prompt 1 here...">
+                <input type="text" id="prompt2" placeholder="Enter prompt 2 here...">
+                <input type="text" id="prompt3" placeholder="Enter prompt 3 here...">
+                <input type="text" id="prompt4" placeholder="Enter prompt 4 here...">
+                <input type="text" id="prompt5" placeholder="Enter prompt 5 here...">
+                <input type="text" id="prompt6" placeholder="Enter prompt 6 here...">
+            </div>
+            <button onclick="generateComic()">Generate Comic</button>
+            <div id="comicOutput" class="output-box"></div>
+        </section>
+    </main>
+    <footer>
+        <p>BY 1.PRERNA ARYA ««  2.KHUSHI JANGID ««  3.KIMI RANDHAWA</p>
+    </footer>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>
