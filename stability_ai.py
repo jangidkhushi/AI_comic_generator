@@ -13,7 +13,7 @@ seed = random.randint(0, 1000000000)
 
 # Set up our connection to the API.
 stability_api = client.StabilityInference(
-    key="sk-iH9cMBrQAa4kX362rzduI2UO6yy3mky8onds9aTdH6JSh1c6", # API Key reference.
+    key="YOUR API KEY", # API Key reference.
     verbose=True, # Print debug messages.
     engine="stable-diffusion-xl-1024-v1-0", # Set the engine to use for generation.
     # Check out the following link for a list of available engines: https://platform.stability.ai/docs/features/api-parameters#engine
